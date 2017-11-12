@@ -71,4 +71,8 @@ void	ft_putnbr_fd(int n, int fd);
 int		ft_islower(int c);
 int		ft_isupper(int c);
 int		ft_isspace(int c);
+int		ft_isgraph(int c);
+int		ft_isblank(int c);
+int		ft_iscntrl(int c);
+int		ft_isxdigit(int c);
 #endif

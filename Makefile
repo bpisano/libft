@@ -21,6 +21,7 @@ PART1 = ft_memset.c		\
 	  	ft_strlen.c		\
 	  	ft_strdup.c		\
 	  	ft_strcpy.c		\
+		ft_strncpy.c	\
 	  	ft_strcat.c		\
 	  	ft_strncat.c	\
 		ft_strlcat.c	\
@@ -50,6 +51,9 @@ PART2 = ft_memalloc.c	\
 		ft_strmapi.c	\
 		ft_strequ.c		\
 		ft_strnequ.c	\
+		ft_strsub.c		\
+		ft_strjoin.c	\
+		ft_strtrim.c	\
 		ft_putchar.c	\
 		ft_putstr.c		\
 		ft_putendl.c	\
@@ -60,9 +64,13 @@ PART2 = ft_memalloc.c	\
 		ft_putnbr_fd.c	\
 
 
-EXTRA = ft_isupper.c	\
+EXTRA = ft_isblank.c	\
+		ft_iscntrl.c	\
+		ft_isgraph.c	\
 		ft_islower.c	\
 		ft_isspace.c	\
+		ft_isupper.c	\
+		ft_isxdigit.c	\
 
 OBJECTS = $(PART1:.c=.o) $(PART2:.c=.o) $(EXTRA:.c=.o)
 
