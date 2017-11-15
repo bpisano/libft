@@ -2,8 +2,8 @@
 Here is the complete libft project with bonus functions. It also includes additional functions. These functions are designed to pass all the 42FileChecker unit test.
 
 # Functions
-## Part 1
-ft_memset.c
+### Part 1
+ft_memset.c\n
 ft_bzero.c
 ft_memcpy.c
 ft_memccpy.c
