@@ -6,7 +6,7 @@
 /*   By: bpisano <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 22:19:56 by bpisano           #+#    #+#             */
-/*   Updated: 2017/11/09 23:09:37 by bpisano          ###   ########.fr       */
+/*   Updated: 2017/11/15 17:18:25 by bpisano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_putstr_fd(char const *s, int fd)
 {
 	int		i;
 
+	if (!s)
+		return ;
 	i = 0;
 	while (s[i])
 	{

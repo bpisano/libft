@@ -6,7 +6,7 @@
 /*   By: bpisano <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 17:03:36 by bpisano           #+#    #+#             */
-/*   Updated: 2017/11/13 17:23:17 by bpisano          ###   ########.fr       */
+/*   Updated: 2017/11/15 17:14:10 by bpisano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	else
 	{
 		ft_memcpy(new->content, content, content_size);
-		new->content_size = content_size;
+		ft_memcpy(&(new->content_size), &content_size, sizeof(content_size));
 	}
 	new->next = NULL;
 	return (new);
