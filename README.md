@@ -123,7 +123,8 @@ Here is the complete libft project with bonus functions. It also includes additi
 
 ### Additional part
 This part is optionnal but can make you win at most 5 points. Some of those functions are used in Part 1 et Part 2 functions. To test them, you can use [Libftest](https://github.com/jtoty/Libftest).
-Note that ft_itoa_base.c wille not pass all the Libftest unit test because my ft_itoa_base.c is designed to handle minus sign in all bases.
+
+*Note :*ft_itoa_base.c will not pass all the Libftest unit test because my ft_itoa_base.c is designed to handle minus sign in all bases.
 * ft_isblank.c
 
 * ft_isupper.c
