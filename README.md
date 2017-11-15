@@ -3,7 +3,7 @@ Here is the complete libft project with bonus functions. It also includes additi
 
 # Functions
 ### Part 1
-ft_memset.c
+* ft_memset.c
 
 ft_bzero.c
 ft_memcpy.c
