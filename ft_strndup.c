@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strclr.c                                        :+:      :+:    :+:   */
+/*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bpisano <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 13:02:33 by bpisano           #+#    #+#             */
-/*   Updated: 2017/11/14 19:24:20 by bpisano          ###   ########.fr       */
+/*   Created: 2017/11/13 11:28:17 by bpisano           #+#    #+#             */
+/*   Updated: 2017/11/13 11:30:14 by bpisano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strclr(char *s)
+char	*ft_strndup(char const *s, size_t n)
 {
-	if (!s)
-		return ;
-	ft_bzero(s, ft_strlen(s));
+	char	*dup;
+
+	if (!(dup = ft_memalloc(n + 1)))
+		return (NULL);
+	ft_strncpy(dup, s, n);
+	return (dup);
 }

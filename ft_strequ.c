@@ -6,7 +6,7 @@
 /*   By: bpisano <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 14:15:35 by bpisano           #+#    #+#             */
-/*   Updated: 2017/11/10 14:20:33 by bpisano          ###   ########.fr       */
+/*   Updated: 2017/11/14 19:27:07 by bpisano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ int		ft_strequ(char const *s1, char const *s2)
 {
 	int		i;
 
+	if (!s1 || !s2)
+		return (0);
 	i = 0;
 	while (s1[i] || s2[i])
 	{

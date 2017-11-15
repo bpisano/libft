@@ -6,7 +6,7 @@
 /*   By: bpisano <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 15:52:00 by bpisano           #+#    #+#             */
-/*   Updated: 2017/11/08 16:42:19 by bpisano          ###   ########.fr       */
+/*   Updated: 2017/11/13 18:15:28 by bpisano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	i = 0;
 	s = (char *)src;
 	d = (char *)dst;
-	while (i < n && s[i] && d[i])
+	while (i < n)
 	{
 		d[i] = s[i];
 		if (s[i] == (char)c)

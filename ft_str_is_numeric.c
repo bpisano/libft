@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strclr.c                                        :+:      :+:    :+:   */
+/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bpisano <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 13:02:33 by bpisano           #+#    #+#             */
-/*   Updated: 2017/11/14 19:24:20 by bpisano          ###   ########.fr       */
+/*   Created: 2017/11/13 10:16:40 by bpisano           #+#    #+#             */
+/*   Updated: 2017/11/13 10:35:58 by bpisano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strclr(char *s)
+int		ft_str_is_numeric(char const *s)
 {
-	if (!s)
-		return ;
-	ft_bzero(s, ft_strlen(s));
+	int		i;
+
+	i = 0;
+	while (s[i])
+	{
+		if (!ft_isdigit(s[i]))
+			return (0);
+		i++;
+	}
+	return (1);
 }

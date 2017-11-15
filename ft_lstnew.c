@@ -1,20 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strclr.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bpisano <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 13:02:33 by bpisano           #+#    #+#             */
-/*   Updated: 2017/11/14 19:24:20 by bpisano          ###   ########.fr       */
+/*   Created: 2017/11/13 17:03:36 by bpisano           #+#    #+#             */
+/*   Updated: 2017/11/13 17:23:17 by bpisano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strclr(char *s)
+t_list	*ft_lstnew(void const *content, size_t content_size)
 {
-	if (!s)
-		return ;
-	ft_bzero(s, ft_strlen(s));
+	t_list	*new;
+
+	if (!(new = (t_list *)ft_memalloc(sizeof(t_list))))
+		return (NULL);
+	if (!(new->content = ft_memalloc(content_size)))
+		return (NULL);
+	if (content == NULL)
+	{
+		new->content = NULL;
+		new->content_size = 0;
+	}
+	else
+	{
+		ft_memcpy(new->content, content, content_size);
+		new->content_size = content_size;
+	}
+	new->next = NULL;
+	return (new);
 }

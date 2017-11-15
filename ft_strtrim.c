@@ -6,7 +6,7 @@
 /*   By: bpisano <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 12:47:44 by bpisano           #+#    #+#             */
-/*   Updated: 2017/11/09 16:45:31 by bpisano          ###   ########.fr       */
+/*   Updated: 2017/11/15 13:22:59 by bpisano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strtrim(char const *s)
 	int		end;
 	char	*trim;
 
+	if (!s)
+		return (NULL);
 	len = ft_strlen(s);
 	begin = 0;
 	end = len;
@@ -27,7 +29,7 @@ char	*ft_strtrim(char const *s)
 	while (ft_isspace(s[end - 1]))
 		end--;
 	if (end - begin <= 0)
-		return ("");
+		return (ft_strdup(""));
 	trim = ft_strsub(s, begin, end - begin);
 	return (trim);
 }
