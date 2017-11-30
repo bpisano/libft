@@ -1,13 +1,14 @@
 /* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: bpisano <marvin@42.fr>                     +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/07 18:31:27 by bpisano           #+#    #+#             */
-/*   Updated: 2017/11/13 19:16:50 by bpisano          ###   ########.fr       */
-/*                                                                            */
+/*                                                          LE - /            */
+/*                                                              /             */
+/*   libft.h                                          .::    .:/ .      .::   */
+/*                                                 +:+:+   +:    +:  +:+:+    */
+/*   By: bpisano <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
+/*                                                 #+#   #+    #+    #+#      */
+/*   Created: 2017/11/23 12:53:56 by bpisano      #+#   ##    ##    #+#       */
+/*   Updated: 2017/11/24 15:46:33 by htaillef    ###    #+. /#+    ###.fr     */
+/*                                                         /                  */
+/*                                                        /                   */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
@@ -85,6 +86,7 @@ void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
+int					ft_sqrt(unsigned int n);
 int					ft_islower(int c);
 int					ft_isupper(int c);
 int					ft_isspace(int c);
@@ -106,4 +108,8 @@ char				*ft_strlowcase(char *s);
 char				*ft_strndup(char const *s, size_t n);
 int					ft_strncasecmp(char const *s1, char const *s2, size_t n);
 char				*ft_strupcase(char *s);
+void				ft_lst_push_back(t_list **lst, t_list *new);
+t_list				*ft_lstpopi(t_list **lst, unsigned int index);
+t_list				*ft_lstat(t_list **lst, unsigned int index);
+int					ft_lstlen(t_list *lst);
 #endif
