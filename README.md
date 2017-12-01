@@ -166,3 +166,17 @@ This part is optionnal but can make you win at most 5 points. Some of those func
 * ft_strcasecmp.c
 
 * ft_strndup.c
+
+### Extra functions
+
+These functions are added for personnal uses. There are not asked for the libft project.
+
+* ft_lst_push_back.c
+
+* ft_lstat.c
+
+* ft_lstlen.c
+
+* ft_lstpopi.c
+
+* ft_sqrt.c
