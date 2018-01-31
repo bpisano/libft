@@ -6,7 +6,7 @@
 #    By: bpisano <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/08 19:19:47 by bpisano           #+#    #+#              #
-#    Updated: 2017/11/24 15:46:50 by htaillef    ###    #+. /#+    ###.fr      #
+#    Updated: 2018/01/31 13:17:24 by bpisano     ###    #+. /#+    ###.fr      #
 #                                                                              #
 # **************************************************************************** #
 
@@ -115,22 +115,18 @@ END = \033[0m
 all: $(NAME)
 
 $(NAME): $(OBJECTS)
-	@echo "\n\t$(BLUE)$(NAME)$(END)"
 	@ar rc $(NAME) $(OBJECTS)
-	@echo "\tCreating libft.a\t\t$(GREEN)Done$(END)"
+	@echo "$(BLUE)$(NAME)\033[500D\033[42C$(GREEN)[DONE]$(END)"
 
 %.o : %.c
-		@gcc -I $(HEADS) $(FLAGS) -o $@ -c $<
+	@echo "Compiling $(notdir $@) \033[500D\033[42C$(RED)[KO]$(END)"
+	@gcc -I $(HEADS) $(FLAGS) -o $@ -c $?
+	@echo "\033[1A\033[500D\033[42C$(GREEN)[DONE]$(END)"
 
 clean:
-	@echo "\n\t$(BLUE)CLEAN$(END)"
 	@rm -f $(OBJECTS)
-	@echo "\tRemoving objects\t\t$(GREEN)Done$(END)"
 
 fclean: clean
-	@echo "\n\t$(BLUE)FCLEAN$(END)"
 	@rm -f $(NAME)
-	@echo "\tRemoving libft.a\t\t$(GREEN)Done$(END)"
 
 re: fclean all
-	@echo "\n\t$(GREEN)All the process is ok$(END)\n"
