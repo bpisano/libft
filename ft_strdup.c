@@ -6,7 +6,7 @@
 /*   By: bpisano <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2017/11/24 13:26:00 by bpisano      #+#   ##    ##    #+#       */
-/*   Updated: 2017/11/24 13:26:03 by bpisano     ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/01/17 19:35:08 by bpisano     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -19,6 +19,8 @@ char	*ft_strdup(const char *s1)
 	int		len;
 	char	*dup;
 
+	if (!s1)
+		return (NULL);
 	i = 0;
 	len = ft_strlen(s1);
 	if (!(dup = (char *)malloc(sizeof(char) * (len + 1))))
