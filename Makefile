@@ -6,7 +6,7 @@
 #    By: bpisano <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/08 19:19:47 by bpisano           #+#    #+#              #
-#    Updated: 2018/01/31 13:17:24 by bpisano     ###    #+. /#+    ###.fr      #
+#    Updated: 2018/02/01 17:54:06 by bpisano     ###    #+. /#+    ###.fr      #
 #                                                                              #
 # **************************************************************************** #
 
@@ -120,7 +120,7 @@ $(NAME): $(OBJECTS)
 
 %.o : %.c
 	@echo "Compiling $(notdir $@) \033[500D\033[42C$(RED)[KO]$(END)"
-	@gcc -I $(HEADS) $(FLAGS) -o $@ -c $?
+	@gcc -I $(HEADS) $(FLAGS) -o $@ -c $<
 	@echo "\033[1A\033[500D\033[42C$(GREEN)[DONE]$(END)"
 
 clean:
