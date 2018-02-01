@@ -6,7 +6,7 @@
 /*   By: bpisano <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2017/11/24 13:11:19 by bpisano      #+#   ##    ##    #+#       */
-/*   Updated: 2017/11/24 13:11:23 by bpisano     ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/02/01 20:07:30 by bpisano     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -17,7 +17,7 @@ void	*ft_memalloc(size_t size)
 {
 	void	*mem;
 
-	if (!(mem = (void *)malloc(sizeof(void) * size)))
+	if (!(mem = malloc(size)))
 		return (NULL);
 	ft_bzero(mem, size);
 	return (mem);
