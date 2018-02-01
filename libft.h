@@ -6,7 +6,7 @@
 /*   By: bpisano <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2017/11/23 12:53:56 by bpisano      #+#   ##    ##    #+#       */
-/*   Updated: 2018/01/31 14:41:40 by bpisano     ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/02/01 21:15:32 by bpisano     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -56,6 +56,7 @@ int					ft_toupper(int c);
 int					ft_tolower(int c);
 
 void				*ft_memalloc(size_t size);
+void				*ft_realloc(void *ptr, size_t size);
 void				ft_memdel(void **ap);
 char				*ft_strnew(size_t size);
 void				ft_strdel(char	**as);

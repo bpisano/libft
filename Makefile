@@ -6,7 +6,7 @@
 #    By: bpisano <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/08 19:19:47 by bpisano           #+#    #+#              #
-#    Updated: 2018/02/01 17:54:06 by bpisano     ###    #+. /#+    ###.fr      #
+#    Updated: 2018/02/01 21:15:47 by bpisano     ###    #+. /#+    ###.fr      #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,6 +42,7 @@ PART1 = ft_memset.c				\
 		ft_tolower.c			\
 
 PART2 = ft_memalloc.c			\
+		ft_realloc.c			\
 		ft_memdel.c				\
 		ft_strnew.c				\
 		ft_strdel.c				\

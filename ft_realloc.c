@@ -1,19 +1,26 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strdel.c                                      .::    .:/ .      .::   */
+/*   ft_realloc.c                                     .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: bpisano <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2017/11/24 13:25:48 by bpisano      #+#   ##    ##    #+#       */
-/*   Updated: 2018/02/01 21:01:22 by bpisano     ###    #+. /#+    ###.fr     */
+/*   Created: 2018/02/01 21:08:49 by bpisano      #+#   ##    ##    #+#       */
+/*   Updated: 2018/02/01 21:14:42 by bpisano     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strdel(char **as)
+void	*ft_realloc(void *ptr, size_t size)
 {
-	ft_memdel((void **)as);
+	void	*new;
+
+	if (!(new = malloc(size)))
+		return (NULL);
+	if (size)
+		ft_memcpy(new, ptr, size);
+	ft_memdel(&ptr);
+	return (new);
 }
