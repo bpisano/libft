@@ -6,7 +6,7 @@
 /*   By: bpisano <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2017/11/24 13:25:48 by bpisano      #+#   ##    ##    #+#       */
-/*   Updated: 2017/12/17 18:25:54 by bpisano     ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/02/01 18:42:55 by bpisano     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -17,6 +17,5 @@ void	ft_strdel(char **as)
 {
 	if (!as)
 		return ;
-	free(*as);
-	*as = NULL;
+	ft_memdel((void **)as);
 }
