@@ -6,7 +6,7 @@
 /*   By: bpisano <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/02/05 14:55:46 by bpisano      #+#   ##    ##    #+#       */
-/*   Updated: 2018/02/05 15:00:16 by bpisano     ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/02/05 18:47:58 by bpisano     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -16,7 +16,9 @@
 void	ft_wputchar_fd(wchar_t c, int fd)
 {
 	if (c <= 0x7F)
+	{
 		ft_putchar_fd(c, fd);
+	}
 	else if (c <= 0x7FF)
 	{
 		ft_putchar_fd((c >> 6) + 0xC0, fd);
@@ -28,7 +30,7 @@ void	ft_wputchar_fd(wchar_t c, int fd)
 		ft_putchar_fd(((c >> 6) & 0x3F) + 0x80, fd);
 		ft_putchar_fd((c & 0x3F) + 0x80, fd);
 	}
-	else
+	else if (c <= 0x10FFFF)
 	{
 		ft_putchar_fd((c >> 18) + 0xF0, fd);
 		ft_putchar_fd(((c >> 12) & 0x3F) + 0x80, fd);

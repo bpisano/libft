@@ -6,7 +6,7 @@
 /*   By: bpisano <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2017/11/23 12:53:56 by bpisano      #+#   ##    ##    #+#       */
-/*   Updated: 2018/02/05 17:44:15 by bpisano     ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/02/05 18:32:32 by bpisano     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -114,10 +114,24 @@ void				ft_lst_push_back(t_list **lst, t_list *new);
 t_list				*ft_lstpopi(t_list **lst, unsigned int index);
 t_list				*ft_lstat(t_list **lst, unsigned int index);
 int					ft_lstlen(t_list *lst);
+char				*ft_strset(char c, size_t size);
+char				*ft_ctos(char c);
 void				ft_wputchar(wchar_t c);
 void				ft_wputchar_fd(wchar_t c, int fd);
 void				ft_wputstr(wchar_t *str);
 void				ft_wputstr_fd(wchar_t *str, int fd);
 size_t				ft_wcharlen(wchar_t c);
-size_t				ft_wstrlen(wchar_t *str);
+size_t				ft_wstrlen(const wchar_t *str);
+wchar_t				*ft_wstrnew(size_t size);
+wchar_t				*ft_wstrset(wchar_t c, size_t size);
+wchar_t				*ft_wctos(wchar_t c);
+wchar_t				*ft_wstrjoin(wchar_t const *s1, wchar_t const *s2);
+wchar_t				*ft_wstrcat(wchar_t *s1, const wchar_t *s2);
+wchar_t				*ft_wstrcpy(wchar_t *dst, const wchar_t *src);
+wchar_t				*ft_wstrdup(const wchar_t *s1);
+wchar_t				*ft_wstrsub(const wchar_t *s1, unsigned int start,
+		size_t size);
+wchar_t				*ft_wstrncpy(wchar_t *dst, const wchar_t *src, size_t len);
+void				ft_wstrdel(wchar_t **as);
+
 #endif

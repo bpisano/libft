@@ -6,24 +6,19 @@
 /*   By: bpisano <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/02/05 17:30:03 by bpisano      #+#   ##    ##    #+#       */
-/*   Updated: 2018/02/05 17:46:07 by bpisano     ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/02/05 18:17:56 by bpisano     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_wstrlen(wchar_t *str)
+size_t	ft_wstrlen(const wchar_t *str)
 {
 	int		i;
-	size_t	len;
 
 	i = 0;
-	len = 0;
 	while (str[i])
-	{
-		len += ft_wcharlen(str[i]);
 		i++;
-	}
-	return (len);
+	return (i);
 }
