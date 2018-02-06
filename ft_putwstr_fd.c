@@ -1,19 +1,26 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_wputchar.c                                    .::    .:/ .      .::   */
+/*   ft_wputstr_fd.c                                  .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: bpisano <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/02/05 13:57:32 by bpisano      #+#   ##    ##    #+#       */
-/*   Updated: 2018/02/05 14:55:37 by bpisano     ###    #+. /#+    ###.fr     */
+/*   Created: 2018/02/05 15:01:45 by bpisano      #+#   ##    ##    #+#       */
+/*   Updated: 2018/02/06 12:11:03 by bpisano     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_wputchar(wchar_t c)
+void	ft_putwstr_fd(wchar_t *str, int fd)
 {
-	ft_wputchar_fd(c, 1);
+	int		i;
+
+	i = 0;
+	while (str[i])
+	{
+		ft_putwchar_fd(str[i], fd);
+		i++;
+	}
 }

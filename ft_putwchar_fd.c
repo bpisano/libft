@@ -6,14 +6,14 @@
 /*   By: bpisano <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/02/05 14:55:46 by bpisano      #+#   ##    ##    #+#       */
-/*   Updated: 2018/02/05 18:47:58 by bpisano     ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/02/06 12:11:24 by bpisano     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_wputchar_fd(wchar_t c, int fd)
+void	ft_putwchar_fd(wchar_t c, int fd)
 {
 	if (c <= 0x7F)
 	{

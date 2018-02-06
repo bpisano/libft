@@ -6,7 +6,7 @@
 #    By: bpisano <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/08 19:19:47 by bpisano           #+#    #+#              #
-#    Updated: 2018/02/05 20:21:35 by bpisano     ###    #+. /#+    ###.fr      #
+#    Updated: 2018/02/06 12:11:52 by bpisano     ###    #+. /#+    ###.fr      #
 #                                                                              #
 # **************************************************************************** #
 
@@ -102,10 +102,10 @@ EXTRA = ft_sqrt.c				\
 		ft_lstlen.c				\
 		ft_strset.c				\
 		ft_ctos.c				\
-		ft_wputchar.c			\
-		ft_wputchar_fd.c		\
-		ft_wputstr.c			\
-		ft_wputstr_fd.c			\
+		ft_putwchar.c			\
+		ft_putwchar_fd.c		\
+		ft_putwstr.c			\
+		ft_putwstr_fd.c			\
 		ft_wcharlen.c			\
 		ft_wstrlen.c			\
 		ft_wstrnew.c			\

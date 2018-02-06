@@ -6,14 +6,14 @@
 /*   By: bpisano <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/02/05 15:01:08 by bpisano      #+#   ##    ##    #+#       */
-/*   Updated: 2018/02/05 15:01:40 by bpisano     ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/02/06 12:10:48 by bpisano     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_wputstr(wchar_t *str)
+void	ft_putwstr(wchar_t *str)
 {
-	ft_wputstr_fd(str, 1);
+	ft_putwstr_fd(str, 1);
 }

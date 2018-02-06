@@ -6,7 +6,7 @@
 /*   By: bpisano <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2017/11/23 12:53:56 by bpisano      #+#   ##    ##    #+#       */
-/*   Updated: 2018/02/05 20:18:52 by bpisano     ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/02/06 12:12:15 by bpisano     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -116,10 +116,10 @@ t_list				*ft_lstat(t_list **lst, unsigned int index);
 int					ft_lstlen(t_list *lst);
 char				*ft_strset(char c, size_t size);
 char				*ft_ctos(char c);
-void				ft_wputchar(wchar_t c);
-void				ft_wputchar_fd(wchar_t c, int fd);
-void				ft_wputstr(wchar_t *str);
-void				ft_wputstr_fd(wchar_t *str, int fd);
+void				ft_putwchar(wchar_t c);
+void				ft_putwchar_fd(wchar_t c, int fd);
+void				ft_putwstr(wchar_t *str);
+void				ft_putwstr_fd(wchar_t *str, int fd);
 size_t				ft_wcharlen(wchar_t c);
 size_t				ft_wstrlen(const wchar_t *str);
 wchar_t				*ft_wstrnew(size_t size);
