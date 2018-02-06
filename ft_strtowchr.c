@@ -6,12 +6,13 @@
 /*   By: bpisano <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/02/05 20:19:07 by bpisano      #+#   ##    ##    #+#       */
-/*   Updated: 2018/02/05 20:21:18 by bpisano     ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/02/06 13:05:38 by bpisano     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 wchar_t	*ft_strtowchr(const char *str)
 {

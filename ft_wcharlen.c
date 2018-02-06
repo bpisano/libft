@@ -6,22 +6,27 @@
 /*   By: bpisano <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/02/05 17:29:10 by bpisano      #+#   ##    ##    #+#       */
-/*   Updated: 2018/02/05 17:45:45 by bpisano     ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/02/06 12:36:51 by bpisano     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_wcharlen(wchar_t c)
+size_t	ft_wcharlen(wint_t c)
 {
-	if (c < 0x80)
-		return (1);
-	else if (c < 0x800)
-		return (2);
-	else if (c < 0x10000)
-		return (3);
-	else
-		return (4);
-	return (0);
+	size_t	i;
+
+	i = 1;
+	if (c <= 0x7F)
+		return (i);
+	if (c > 0x1FFFFF)
+		return (-1);
+	while (1)
+	{
+		if (!(c >>= 6))
+			break ;
+		i++;
+	}
+	return (i);
 }
