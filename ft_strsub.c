@@ -6,7 +6,7 @@
 /*   By: bpisano <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2017/11/24 13:38:45 by bpisano      #+#   ##    ##    #+#       */
-/*   Updated: 2017/11/24 13:38:46 by bpisano     ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/02/06 15:27:05 by bpisano     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,21 +15,14 @@
 
 char	*ft_strsub(char const *s, unsigned int start, size_t size)
 {
-	unsigned int	i;
 	char			*str;
 	char			*cpy;
 
 	if (!s)
 		return (NULL);
-	if (!(cpy = ft_memalloc(size + 1)))
+	if (!(cpy = ft_strnew(size)))
 		return (NULL);
-	i = 0;
 	str = (char *)s;
-	while (i < start)
-	{
-		str++;
-		i++;
-	}
-	ft_strncpy(cpy, str, size);
+	ft_strncpy(cpy, str + start, size);
 	return (cpy);
 }

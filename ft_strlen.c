@@ -6,7 +6,7 @@
 /*   By: bpisano <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2017/11/24 13:32:46 by bpisano      #+#   ##    ##    #+#       */
-/*   Updated: 2017/11/24 13:32:48 by bpisano     ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/02/07 17:41:26 by bpisano     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -17,6 +17,8 @@ size_t	ft_strlen(const char *str)
 {
 	size_t		i;
 
+	if (!(*str))
+		return (0);
 	i = 0;
 	while (str[i])
 		i++;
