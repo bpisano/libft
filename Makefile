@@ -6,7 +6,7 @@
 #    By: bpisano <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/08 19:19:47 by bpisano           #+#    #+#              #
-#    Updated: 2018/02/06 12:11:52 by bpisano     ###    #+. /#+    ###.fr      #
+#    Updated: 2018/02/22 16:48:53 by bpisano     ###    #+. /#+    ###.fr      #
 #                                                                              #
 # **************************************************************************** #
 
@@ -119,6 +119,7 @@ EXTRA = ft_sqrt.c				\
 		ft_wstrncpy.c			\
 		ft_wstrdel.c			\
 		ft_strtowchr.c			\
+		get_next_line.c			\
 
 OBJECTS = $(PART1:.c=.o) $(PART2:.c=.o) $(BONUS:.c=.o) $(EXTRA:.c=.o)
 
