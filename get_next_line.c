@@ -6,7 +6,7 @@
 /*   By: bpisano <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2017/12/01 11:52:58 by bpisano      #+#   ##    ##    #+#       */
-/*   Updated: 2018/02/22 16:49:07 by bpisano     ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/02/26 14:03:15 by bpisano     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -91,8 +91,6 @@ int				get_next_line(const int fd, char **line)
 	else
 		file->content = ft_strdup((char *)(file->content));
 	r = read_buff(fd, (char **)&(file->content));
-	//if (!r && ft_strlen(file->content))
-		//r = 1;
 	if (read_rest((char **)&(file->content), line))
 		return (1);
 	*line = (char *)(file->content);
