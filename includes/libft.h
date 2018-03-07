@@ -6,7 +6,7 @@
 /*   By: bpisano <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2017/11/23 12:53:56 by bpisano      #+#   ##    ##    #+#       */
-/*   Updated: 2018/02/22 16:49:55 by bpisano     ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/03/07 16:19:23 by bpisano     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -138,5 +138,6 @@ wchar_t				*ft_wstrncpy(wchar_t *dst, const wchar_t *src, size_t len);
 void				ft_wstrdel(wchar_t **as);
 wchar_t				*ft_strtowchr(const char *str);
 int					get_next_line(const int fd, char **line);
+int					ft_printf(const char *restrict format, ...);
 
 #endif

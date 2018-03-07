@@ -6,7 +6,7 @@
 /*   By: bpisano <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/01/30 11:29:15 by bpisano      #+#   ##    ##    #+#       */
-/*   Updated: 2018/02/06 16:31:23 by bpisano     ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/03/07 16:18:29 by bpisano     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -21,7 +21,6 @@
 # include <stdlib.h>
 # include <stdarg.h>
 
-int		ft_printf(const char *restrict format, ...);
 char	*ft_itoa_base_arg(long long n, int base, t_arg *arg);
 char	*ft_uitoa_base_arg(unsigned long long n, unsigned int base, t_arg *arg);
 
