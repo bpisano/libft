@@ -6,7 +6,7 @@
 /*   By: bpisano <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2017/11/23 12:53:56 by bpisano      #+#   ##    ##    #+#       */
-/*   Updated: 2018/03/08 17:23:51 by bpisano     ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/03/13 21:03:32 by bpisano     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -62,6 +62,7 @@ void				*ft_memalloc(size_t size);
 void				*ft_realloc(void *ptr, size_t size);
 void				ft_memdel(void **ap);
 char				*ft_strnew(size_t size);
+char				*ft_strrealloc(char *ptr, size_t size);
 void				ft_strdel(char	**as);
 void				ft_strclr(char *s);
 void				ft_striter(char *s, void (*f)(char *c));

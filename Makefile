@@ -6,7 +6,7 @@
 #    By: bpisano <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/08 19:19:47 by bpisano           #+#    #+#              #
-#    Updated: 2018/03/08 17:24:21 by bpisano     ###    #+. /#+    ###.fr      #
+#    Updated: 2018/03/13 21:03:51 by bpisano     ###    #+. /#+    ###.fr      #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,6 +45,7 @@ PART2 = ft_memalloc.c			\
 		ft_realloc.c			\
 		ft_memdel.c				\
 		ft_strnew.c				\
+		ft_strrealloc.c			\
 		ft_strdel.c				\
 		ft_strclr.c				\
 		ft_striter.c			\
