@@ -6,7 +6,7 @@
 /*   By: bpisano <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2017/11/24 13:25:37 by bpisano      #+#   ##    ##    #+#       */
-/*   Updated: 2017/11/24 13:25:39 by bpisano     ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/03/14 16:26:50 by bpisano     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -17,12 +17,9 @@ char	*ft_strcpy(char *dst, const char *src)
 {
 	int		i;
 
-	i = 0;
-	while (src[i])
-	{
+	i = -1;
+	while (src[++i])
 		dst[i] = src[i];
-		i++;
-	}
 	dst[i] = '\0';
 	return (dst);
 }
