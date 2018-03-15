@@ -6,7 +6,7 @@
 /*   By: bpisano <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2017/11/24 13:25:00 by bpisano      #+#   ##    ##    #+#       */
-/*   Updated: 2018/03/13 13:16:03 by bpisano     ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/03/15 11:37:55 by bpisano     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -24,7 +24,6 @@ char	*ft_strchr(const char *s, int c)
 	{
 		if (str[i] == (char)c)
 			return (str + i);
-		i++;
 	}
 	if (str[i] == (char)c)
 		return (str + i);
