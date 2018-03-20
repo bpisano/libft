@@ -6,7 +6,7 @@
 /*   By: bpisano <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2017/11/23 12:53:56 by bpisano      #+#   ##    ##    #+#       */
-/*   Updated: 2018/03/13 21:03:32 by bpisano     ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/03/15 15:46:29 by bpisano     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -19,7 +19,7 @@
 # include <fcntl.h>
 # include <wchar.h>
 
-# define BUFF_SIZE 64
+# define BUFF_SIZE 2
 
 typedef struct		s_list
 {

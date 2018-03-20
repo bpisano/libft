@@ -6,7 +6,7 @@
 /*   By: bpisano <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2017/12/01 11:52:58 by bpisano      #+#   ##    ##    #+#       */
-/*   Updated: 2018/03/15 11:40:50 by bpisano     ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/03/20 18:35:52 by bpisano     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -43,7 +43,7 @@ int			get_next_line(const int fd, char **line)
 	char			*str;
 
 	ret = 1;
-	if (!line || fd < 0 || BUFF_SIZE < 1 || (!buff && !(buff = malloc(1))))
+	if (!line || fd < 0 || BUFF_SIZE < 1 || (!buff && !(buff = ft_memalloc(1))))
 		return (-1);
 	while (ret > 0)
 	{
@@ -61,5 +61,7 @@ int			get_next_line(const int fd, char **line)
 	free(str);
 	if (!ret && ft_strlen(buff))
 		ret = ft_cpy_end(line, &buff);
+	if (!(*buff))
+		free(buff);
 	return (ret);
 }
