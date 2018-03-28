@@ -6,7 +6,7 @@
 #    By: bpisano <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/08 19:19:47 by bpisano           #+#    #+#              #
-#    Updated: 2018/03/13 21:03:51 by bpisano     ###    #+. /#+    ###.fr      #
+#    Updated: 2018/03/28 14:12:27 by bpisano     ###    #+. /#+    ###.fr      #
 #                                                                              #
 # **************************************************************************** #
 
@@ -122,6 +122,7 @@ EXTRA = ft_abs.c				\
 		ft_wstrdel.c			\
 		ft_strtowchr.c			\
 		get_next_line.c			\
+		skip_next_line.c		\
 		ft_printf/alpha_type_manager.c	\
 		ft_printf/arg_manager.c			\
 		ft_printf/arg_setter.c			\
