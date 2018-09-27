@@ -16,7 +16,7 @@
 int		ft_str_is_empty(char *str)
 {
 	int		i;
-	
+
 	if (!str)
 		return (0);
 	i = -1;
