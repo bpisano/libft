@@ -6,7 +6,7 @@
 /*   By: bpisano <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/27 11:30:45 by bpisano      #+#   ##    ##    #+#       */
-/*   Updated: 2018/09/27 11:31:22 by bpisano     ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/05 11:11:27 by bpisano     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -21,7 +21,7 @@ int		ft_str_is_empty(char *str)
 		return (0);
 	i = -1;
 	while (str[++i])
-		if (str[i] != ' ' || str[i] != '\t')
+		if (!ft_isspace(str[i]))
 			return (0);
 	return (1);
 }
