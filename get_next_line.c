@@ -6,7 +6,7 @@
 /*   By: bpisano <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2017/12/01 11:52:58 by bpisano      #+#   ##    ##    #+#       */
-/*   Updated: 2018/03/20 18:52:32 by bpisano     ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/16 14:43:23 by bpisano     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -61,6 +61,6 @@ int			get_next_line(const int fd, char **line)
 	free(str);
 	if (!ret && ft_strlen(buff))
 		ret = ft_cpy_end(line, &buff);
-	(!(*buff)) ? free(buff) : 0;
+	(!(*buff)) ? ft_memdel((void *)&buff) : 0;
 	return (ret);
 }
