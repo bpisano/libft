@@ -6,7 +6,7 @@
 /*   By: bpisano <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2017/11/24 13:37:53 by bpisano      #+#   ##    ##    #+#       */
-/*   Updated: 2017/11/24 13:38:08 by bpisano     ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/12/11 20:03:55 by bpisano     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -38,7 +38,7 @@ static	char	*ft_fill_word(const char *str, char c, int *i)
 	char	*word;
 	int		j;
 
-	if (!(word = (char *)malloc(sizeof(char) * (ft_strlen(str)))))
+	if (!(word = (char *)malloc(sizeof(char) * (ft_strlen(str) + 1))))
 		return (NULL);
 	j = 0;
 	while (str[*i] != c && str[*i])
