@@ -148,6 +148,7 @@ long				ft_mask(int c);
 int					get_next_line(const int fd, char **line);
 size_t				ft_tablen(char **tab);
 int					ft_printf(const char *restrict format, ...);
+int					ft_dprintf(int fd, const char *restrict format, ...);
 
 typedef struct		s_gnl
 {
