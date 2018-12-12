@@ -20,6 +20,10 @@
 # include <wchar.h>
 
 # define BUFF_SIZE 2
+# define MASK_0X80L	0x8080808080808080L
+# define MASK_0X01L 0x0101010101010101L
+# define MASK_0X01	0x01010101L
+# define MASK_0X80	0x80808080L
 
 typedef struct		s_list
 {
@@ -140,8 +144,17 @@ wchar_t				*ft_wstrsub(const wchar_t *s1, unsigned int start,
 wchar_t				*ft_wstrncpy(wchar_t *dst, const wchar_t *src, size_t len);
 void				ft_wstrdel(wchar_t **as);
 wchar_t				*ft_strtowchr(const char *str);
+long				ft_mask(int c);
 int					get_next_line(const int fd, char **line);
 size_t				ft_tablen(char **tab);
 int					ft_printf(const char *restrict format, ...);
+
+typedef struct		s_gnl
+{
+	char			buff[BUFF_SIZE];
+	int				ret;
+	int				start;
+	int				len;
+}					t_gnl;
 
 #endif

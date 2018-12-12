@@ -6,7 +6,7 @@
 #    By: bpisano <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/08 19:19:47 by bpisano           #+#    #+#              #
-#    Updated: 2018/10/04 19:04:37 by bpisano     ###    #+. /#+    ###.fr      #
+#    Updated: 2018/12/12 14:33:18 by bpisano     ###    #+. /#+    ###.fr      #
 #                                                                              #
 # **************************************************************************** #
 
@@ -125,6 +125,7 @@ EXTRA = ft_abs.c				\
 		get_next_line.c			\
 		skip_next_line.c		\
 		ft_tablen.c				\
+		ft_mask.c				\
 		ft_printf/alpha_type_manager.c	\
 		ft_printf/arg_manager.c			\
 		ft_printf/arg_setter.c			\
@@ -157,7 +158,7 @@ $(NAME): $(OBJECTS)
 	@echo "$(BLUE)$(NAME)\033[500D\033[42C$(GREEN)[DONE]$(END)"
 
 %.o : %.c
-	@echo "Compiling $(notdir $@) \033[500D\033[42C$(RED)[KO]$(END)"
+	@echo "$(YELLOW)Compiling$(END) $(notdir $@) \033[500D\033[42C$(RED)[KO]$(END)"
 	@gcc -I $(HEADS) $(FLAGS) -o $@ -c $<
 	@echo "\033[1A\033[500D\033[42C$(GREEN)[DONE]$(END)"
 

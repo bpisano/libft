@@ -13,54 +13,88 @@
 
 #include "libft.h"
 
-char		*ft_readline(const int fd, char *buff, int *ret)
+static int		ft_memchr_int(const char *mem, const unsigned char c, size_t n)
 {
-	char	tmp[BUFF_SIZE + 1];
-	char	*tmp2;
+	unsigned long	mask;
+	unsigned long	*l;
+	unsigned char	*s;
+	int				a;
+	int				b;
 
-	if ((*ret = read(fd, tmp, BUFF_SIZE)) < 0)
-		return (0);
-	tmp[*ret] = 0;
-	tmp2 = buff;
-	if (!(buff = ft_strjoin(buff, tmp)))
-		return (0);
-	free(tmp2);
-	return (buff);
-}
-
-int			ft_cpy_end(char **line, char **buff)
-{
-	if (!(*line = ft_strdup(*buff)))
-		return (-1);
-	ft_bzero(*buff, ft_strlen(*buff));
-	return (1);
-}
-
-int			get_next_line(const int fd, char **line)
-{
-	static char		*buff = NULL;
-	int				ret;
-	char			*str;
-
-	ret = 1;
-	if (!line || fd < 0 || BUFF_SIZE < 1 || (!buff && !(buff = ft_memalloc(1))))
-		return (-1);
-	while (ret > 0)
+	a = 0;
+	s = (unsigned char *)mem;
+	while (((n - a) % 8) && (n - a))
+		if (s[a++] == c)
+			return (--a);
+	mask = ft_mask((int)c);
+	l = (unsigned long *)(s + a);
+	while (a < (int)n)
 	{
-		if ((str = ft_strchr(buff, '\n')))
+		if ((((*l++ ^ mask) - MASK_0X01L) & MASK_0X80L) && (b = -1))
 		{
-			*str = 0;
-			if (!(*line = ft_strdup(buff)))
-				return (-1);
-			ft_strcpy(buff, str + 1);
+			s = (unsigned char *)(l - 1);
+			while (++b < 8)
+				if (s[b] == c)
+					return (a + b);
+		}
+		a += 8;
+	}
+	return (a);
+}
+
+static char		*ft_strjoin_free(char *s1, char *s2, int lens2)
+{
+	char	*str;
+	int		i;
+	int		a;
+	int		b;
+	int		lens1;
+
+	i = 0;
+	a = 0;
+	b = 0;
+	if (!s1 || !s2)
+		return (NULL);
+	lens1 = ft_strlen(s1);
+	if (!(str = ft_strnew(lens1 + lens2)))
+		return (NULL);
+	ft_memcpy(str, s1, lens1);
+	ft_memcpy(str + lens1, s2, lens2);
+	free(s1);
+	return (str);
+}
+
+static int		free_line(char *ptr)
+{
+	free(ptr);
+	return (0);
+}
+
+int				get_next_line(const int fd, char **line)
+{
+	static t_gnl gnl;
+
+	if (fd < 0 || !line || !(*line = ft_strnew(0)))
+		return (-1);
+	while ("z4 > z*")
+	{
+		if ((gnl.ret) <= 0 && !(gnl.start = 0) &&
+				((gnl.ret = read(fd, gnl.buff, BUFF_SIZE)) < 0))
+			return (-1);
+		if (!(gnl.ret))
+		{
+			if (**line)
+				return (1);
+			return (free_line(*line));
+		}
+		gnl.len = ft_memchr_int(&((gnl.buff)[gnl.start]), '\n', gnl.ret);
+		*line = ft_strjoin_free(*line, &((gnl.buff)[gnl.start]), gnl.len);
+		if ((gnl.ret -= gnl.len) &&
+				((gnl.buff[gnl.start += gnl.len] == '\n') || !gnl.len))
+		{
+			gnl.ret--;
+			gnl.start++;
 			return (1);
 		}
-		if (!(buff = ft_readline(fd, buff, &ret)))
-			return (-1);
 	}
-	free(str);
-	if (!ret && ft_strlen(buff))
-		ret = ft_cpy_end(line, &buff);
-	(!(*buff)) ? ft_memdel((void *)&buff) : 0;
-	return (ret);
 }
