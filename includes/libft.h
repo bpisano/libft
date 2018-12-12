@@ -5,8 +5,8 @@
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: bpisano <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2017/11/23 12:53:56 by bpisano      #+#   ##    ##    #+#       */
-/*   Updated: 2018/12/12 14:58:11 by bpisano     ###    #+. /#+    ###.fr     */
+/*   Created: 2018/12/12 23:25:40 by bpisano      #+#   ##    ##    #+#       */
+/*   Updated: 2018/12/12 23:25:49 by bpisano     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -50,7 +50,7 @@ char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
 char				*ft_strstr(const char *haystack, const char *needle);
 char				*ft_strnstr(const char *haystack, const char *needle,
-					size_t len);
+		size_t len);
 int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_atoi(const char *str);
