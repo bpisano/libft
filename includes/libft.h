@@ -6,7 +6,7 @@
 /*   By: bpisano <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2017/11/23 12:53:56 by bpisano      #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/04 19:11:58 by bpisano     ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/12/12 14:58:11 by bpisano     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -148,6 +148,7 @@ long				ft_mask(int c);
 int					get_next_line(const int fd, char **line);
 size_t				ft_tablen(char **tab);
 int					ft_printf(const char *restrict format, ...);
+int					ft_error(const char *restrict format, ...);
 int					ft_dprintf(int fd, const char *restrict format, ...);
 
 typedef struct		s_gnl

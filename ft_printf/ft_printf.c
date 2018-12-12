@@ -6,7 +6,7 @@
 /*   By: bpisano <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/01/30 11:54:50 by bpisano      #+#   ##    ##    #+#       */
-/*   Updated: 2018/02/07 18:15:41 by bpisano     ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/12/12 14:57:47 by bpisano     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -63,6 +63,20 @@ int				ft_printf(const char *restrict format, ...)
 	va_start(params, format);
 	printed = 0;
 	main_buffer(f, params, &printed, 1);
+	va_end(params);
+	return (printed);
+}
+
+int				ft_error(const char *restrict format, ...)
+{
+	va_list		params;
+	int			printed;
+	char		*f;
+
+	f = (char *)format;
+	va_start(params, format);
+	printed = 0;
+	main_buffer(f, params, &printed, 2);
 	va_end(params);
 	return (printed);
 }
