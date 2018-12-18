@@ -6,7 +6,7 @@
 #    By: bpisano <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/08 19:19:47 by bpisano           #+#    #+#              #
-#    Updated: 2018/12/12 14:33:18 by bpisano     ###    #+. /#+    ###.fr      #
+#    Updated: 2018/12/18 16:13:00 by bpisano     ###    #+. /#+    ###.fr      #
 #                                                                              #
 # **************************************************************************** #
 
@@ -141,7 +141,7 @@ EXTRA = ft_abs.c				\
 
 OBJECTS = $(PART1:.c=.o) $(PART2:.c=.o) $(BONUS:.c=.o) $(EXTRA:.c=.o)
 
-HEADS = ./includes
+HEADS = -I ./includes
 
 FLAGS = -Wall -Werror -Wextra
 
@@ -157,9 +157,9 @@ $(NAME): $(OBJECTS)
 	@ar rc $(NAME) $(OBJECTS)
 	@echo "$(BLUE)$(NAME)\033[500D\033[42C$(GREEN)[DONE]$(END)"
 
-%.o : %.c
+%.o : %.c includes/libft.h includes/arg.h includes/buffer.h includes/ft_printf.h includes/types.h
 	@echo "$(YELLOW)Compiling$(END) $(notdir $@) \033[500D\033[42C$(RED)[KO]$(END)"
-	@gcc -I $(HEADS) $(FLAGS) -o $@ -c $<
+	@gcc $(HEADS) $(FLAGS) -o $@ -c $<
 	@echo "\033[1A\033[500D\033[42C$(GREEN)[DONE]$(END)"
 
 clean:
